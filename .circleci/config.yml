@@ -39,7 +39,7 @@ jobs:
         - checkout
         - run:
             name: Install sshpass
-            command: sudo apt-get install sshpass
+            command: sudo apt-get update && sudo apt-get install sshpass
 
         - run:
             name: Launch deploy job on OVH
