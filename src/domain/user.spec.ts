@@ -2,7 +2,7 @@ import { User } from './user';
 
 describe('domain/User', () => {
   describe('constructor', () => {
-    it(`should create a new User`, () => {
+    it('should create a new User', () => {
       // GIVEN
       const firstName = 'Karl';
       const lastName = 'Marx';
