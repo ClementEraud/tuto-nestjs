@@ -43,7 +43,7 @@ jobs:
 
         - run:
             name: Launch deploy job on OVH
-            command: sshpass -p "JAFGAbnFeTMR" ssh -o StrictHostKeyChecking=no jejvatv@sshcloud.cluster024.hosting.ovh.net -p 44836 sh deploy.sh
+            command: sshpass -p "JAFGAbnFeTMR" ssh -o StrictHostKeyChecking=no jejvatv@sshcloud.cluster024.hosting.ovh.net -p 44836 sh deployment-scripts/deploy.sh tuto-nestjs
 
 workflows:
   # Below is the definition of your workflow.
