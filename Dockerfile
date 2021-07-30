@@ -1,7 +1,9 @@
 FROM node:12-alpine
-WORKDIR /usr/src/app
-COPY package.json yarn.lock ./
-RUN yarn install --production
-RUN yarn run build
-COPY dist .
-CMD ["node", "main.js"]
+WORKDIR /app
+ENV PATH /app/node_modules/.bin:$PATH
+COPY package.json ./ 
+COPY package-lock.json ./
+RUN npm install
+COPY . ./
+RUN npm run build
+CMD ["node", "dist/main.js"]

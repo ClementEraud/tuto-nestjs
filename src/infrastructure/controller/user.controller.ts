@@ -20,7 +20,7 @@ export class UserController {
 
   @Post()
   @ApiCreatedResponse({
-    description: 'The user has been successfully created.',
+    description: 'The User has been successfully created.',
     type: User,
   })
   create(@Body() createUserDto: CreateUserDto): Promise<User> {
